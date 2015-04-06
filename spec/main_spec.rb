@@ -23,7 +23,11 @@ describe "#image_resize" do
 		end
 
 		describe "Aspect Ratio" do
-			it "determines if the picture is landscape or portrait" do 
+			it "determines if the picture is landscape/square" do
+				width, height = 400,200
+				answer = "landscape"
+
+				expect(orientation(width,height)).to eq(answer)
 			end
 
 			it "finds corresponding side of a square" do
