@@ -59,6 +59,15 @@ describe "#image_resize" do
 			end
 		end
 
+		describe "Resize" do 
+			it "resizes a landscape image "
+
+			it "resizes a square"
+
+			it "resizes a portrait image"
+
+		end
+
 
 	end
 
