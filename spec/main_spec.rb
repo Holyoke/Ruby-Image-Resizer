@@ -83,6 +83,9 @@ describe "#image_resize" do
 		end
 
 		describe "Image Resizer" do
+			it "takes a pair of dimensions"
+
+			it "takes several pairs of dimensions"
 		end
 
 
