@@ -20,24 +20,32 @@ describe "#image_resize" do
 
 				expect(parse(str)).to eq(answer)
 			end
-
 		end
 
 		describe "Aspect Ratio" do
-			it "calculates aspect ratio for squares" do
-				width, height = 200,200
-				answer = 1
+			it "finds corresponding side of a square" do
+				width, height = 200, 200
+				answer = 200
 
-				expect(get_ratio(width,height)).to eq(answer)
+				expect(get_side(width, height)).to eq(answer)
 			end
 
-			it "calculates aspect ratio in floats" do
-				width, height = 400, 300
-				answer = 400.0 /300.0
+			it "finds corresponding side of landscape" do 
+				width, height = 400, 200
+				answer = 100
 
-				expect(get_ratio(width,height)).to eq(answer)
+				expect(get_side(width, height)).to eq(answer)
+			end
+
+			it "finds corresponding side of portrait" do 
+				width, height = 600, 800
+				answer = 150
+
+				expect(get_side(width, height)).to eq(answer)
 			end
 		end
+
+
 	end
 
 	# context "Sample Input" do
