@@ -4,7 +4,17 @@ require "set"
 # test = File.read("spec/test_input.txt").split("\n")
 
 def image_resizer(input)
+	dimensions = parse(input)
+	result = []
 
+	until dimensions.empty?
+		width = dimensions.shift()
+		height = dimensions.shift()
+
+		result += resize(width, height)
+	end
+
+	result
 end
 
 def parse(str)

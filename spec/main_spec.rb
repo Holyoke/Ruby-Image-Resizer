@@ -83,9 +83,19 @@ describe "#image_resize" do
 		end
 
 		describe "Image Resizer" do
-			it "takes a pair of dimensions"
+			it "takes a pair of dimensions" do
+				input = "[400,200]"
+				answer = [200, 100]
 
-			it "takes several pairs of dimensions"
+				expect(image_resizer(input)).to eq(answer)
+			end
+
+			it "takes several pairs of dimensions" do
+				input = "[1256,1200, 600, 800, 200, 200, 400, 200, 800,1256]"
+				answer = [200, 191, 150, 200, 200, 200, 200, 100, 127, 200]
+
+				expect(image_resizer(input)).to eq(answer)
+			end
 		end
 
 
