@@ -22,20 +22,6 @@ def parse(str)
 	result.map{|c| c.to_i }
 end
 
-def get_height(w,h)
-	y = 200*h / w
-	y
-end
-
-def get_width(w,h)
-	x = 200*w / h
-	x
-end
-
-def orientation(w,h)
-	w >= h ? "landscape" : "portrait"
-end
-
 def resize(w,h)
 	orientation = orientation(w, h)
 
@@ -46,4 +32,18 @@ def resize(w,h)
 	end
 
 	result
+end
+
+def orientation(w,h)
+	w >= h ? "landscape" : "portrait"
+end
+
+def get_height(w,h)
+	y = 200*h / w
+	y
+end
+
+def get_width(w,h)
+	x = 200*w / h
+	x
 end
