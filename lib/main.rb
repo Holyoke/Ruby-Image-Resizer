@@ -7,7 +7,7 @@ def image_resizer(input)
 	dimensions = parse(input)
 	result = []
 
-	until dimensions.empty?
+	until dimensions.size <= 0 
 		width = dimensions.shift()
 		height = dimensions.shift()
 
