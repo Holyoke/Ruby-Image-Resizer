@@ -11,3 +11,7 @@ def parse(str)
 	result = str[1..str.size].split(",")
 	result.map{|c| c.to_i }
 end
+
+def aspect_ratio(w,h)
+	
+end

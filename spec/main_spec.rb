@@ -11,6 +11,12 @@ describe "#image_resize" do
 
 			expect(parse(str)).to eq(answer)
 		end
+
+		describe "Aspect Ratio" do
+			it "calculates aspect ratio for squares"
+
+			it "calculates aspect ratio in floats"
+		end
 	end
 
 	context "Sample Input" do
