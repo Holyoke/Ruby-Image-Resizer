@@ -3,7 +3,7 @@ require "set"
 
 # test = File.read("spec/test_input.txt").split("\n")
 
-def image_resize(input)
+def image_resizer(input)
 
 end
 
@@ -12,11 +12,16 @@ def parse(str)
 	result.map{|c| c.to_i }
 end
 
-def get_side(w,h)
-	side = 200*h / w
-	side
+def get_height(w,h)
+	y = 200*h / w
+	y
+end
+
+def get_width(w,h)
+	x = 200*w / h
+	x
 end
 
 def orientation(w,h)
-	
+	w >= h ? "landscape" : "portrait"
 end

@@ -4,7 +4,7 @@ require "byebug"
 
 describe "#image_resize" do
 
-	context "Test Case 1 Analysis" do
+	context "Analysis" do
 
 		describe "Parse" do
 			it "parses a string representation of [width, height]" do
@@ -30,25 +30,32 @@ describe "#image_resize" do
 				expect(orientation(width,height)).to eq(answer)
 			end
 
+			it "determines if the picture is portrait" do
+				width, height = 600,800
+				answer = "portrait"
+
+				expect(orientation(width,height)).to eq(answer)
+			end
+
 			it "finds corresponding side of a square" do
 				width, height = 200, 200
 				answer = 200
 
-				expect(get_side(width, height)).to eq(answer)
+				expect(get_height(width, height)).to eq(answer)
 			end
 
 			it "finds corresponding side of landscape" do 
 				width, height = 400, 200
 				answer = 100
 
-				expect(get_side(width, height)).to eq(answer)
+				expect(get_height(width, height)).to eq(answer)
 			end
 
 			it "finds corresponding side of portrait" do 
 				width, height = 600, 800
 				answer = 150
 
-				expect(get_side(width, height)).to eq(answer)
+				expect(get_width(width, height)).to eq(answer)
 			end
 		end
 
