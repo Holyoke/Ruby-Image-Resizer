@@ -23,6 +23,9 @@ describe "#image_resize" do
 		end
 
 		describe "Aspect Ratio" do
+			it "determines if the picture is landscape or portrait" do 
+			end
+
 			it "finds corresponding side of a square" do
 				width, height = 200, 200
 				answer = 200

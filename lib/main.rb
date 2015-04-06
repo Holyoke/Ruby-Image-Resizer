@@ -16,3 +16,7 @@ def get_side(w,h)
 	side = 200*h / w
 	side
 end
+
+def orientation(w,h)
+	
+end
