@@ -12,6 +12,7 @@ def parse(str)
 	result.map{|c| c.to_i }
 end
 
-def get_ratio(w,h)
-	w.to_f / h
+def get_side(w,h)
+	side = 200*h / w
+	side
 end
