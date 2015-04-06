@@ -12,6 +12,6 @@ def parse(str)
 	result.map{|c| c.to_i }
 end
 
-def aspect_ratio(w,h)
-	
+def get_ratio(w,h)
+	w.to_f / h
 end
