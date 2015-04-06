@@ -2,9 +2,15 @@ require "rspec"
 require "main.rb"
 require "byebug"
 
-describe "#method" do
+describe "#image_resize" do
 
 	context "Test Case 1 Analysis" do
+		it "parses a string representation of an array" do
+			str = "[200,200"
+			answer = [200,200]
+
+			expect(parse(str)).to eq(answer)
+		end
 	end
 
 	context "Sample Input" do

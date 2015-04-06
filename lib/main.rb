@@ -8,4 +8,6 @@ def image_resize(input)
 end
 
 def parse(str)
+	result = str[1..str.size].split(",")
+	result.map{|c| c.to_i }
 end
