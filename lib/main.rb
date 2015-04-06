@@ -25,3 +25,15 @@ end
 def orientation(w,h)
 	w >= h ? "landscape" : "portrait"
 end
+
+def resize(w,h)
+	orientation = orientation(w, h)
+
+	if orientation == "landscape"
+		result = [200, get_height(w,h)]
+	else
+		result = [get_width(w,h), 200]
+	end
+
+	result
+end

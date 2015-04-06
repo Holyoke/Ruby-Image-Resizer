@@ -60,12 +60,29 @@ describe "#image_resize" do
 		end
 
 		describe "Resize" do 
-			it "resizes a landscape image "
+			it "resizes a square" do 
+				width, height = 200, 200
+				answer = [200,200]
 
-			it "resizes a square"
+				expect(resize(width,height)).to eq(answer)
+			end
 
-			it "resizes a portrait image"
+			it "resizes a landscape image " do 
+				width, height = 400, 200
+				answer = [200,100]
 
+				expect(resize(width,height)).to eq(answer)
+			end
+
+			it "resizes a portrait image" do 
+				width, height = 600, 800
+				answer = [150, 200]
+
+				expect(resize(width,height)).to eq(answer)
+			end
+		end
+
+		describe "Image Resizer" do
 		end
 
 
